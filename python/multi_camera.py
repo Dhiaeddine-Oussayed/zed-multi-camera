@@ -106,11 +106,11 @@ def main():
             if zed_list[index].is_opened():
                 if (timestamp_list[index] > last_ts_list[index]):
                     cv2.imshow(name_list[index], left_list[index].get_data())
-                    x = round(depth_list[index].get_width() / 2)
-                    y = round(depth_list[index].get_height() / 2)
-                    err, depth_value = depth_list[index].get_value(x, y)
-                    if np.isfinite(depth_value):
-                        print("{} depth at center: {}MM".format(name_list[index], round(depth_value)))
+                    # x = round(depth_list[index].get_width() / 2)
+                    # y = round(depth_list[index].get_height() / 2)
+                    # err, depth_value = depth_list[index].get_value(x, y)
+                    # if np.isfinite(depth_value):
+                        # print("{} depth at center: {}MM".format(name_list[index], round(depth_value)))
                     last_ts_list[index] = timestamp_list[index]
         key = cv2.waitKey(10)
     cv2.destroyAllWindows()
